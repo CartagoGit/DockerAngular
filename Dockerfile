@@ -23,4 +23,4 @@ RUN eval $(fnm env) && fnm use ${NODE_DEFAULT_VERSION} \
   )" \
   # Limpiar cache y temporales
   && apt-get clean \
-  && rm -rf '/var/lib/apt/lists/*' '/tmp/*'
+  && rm -rf /var/lib/apt/lists/*' /tmp/*
