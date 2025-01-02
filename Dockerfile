@@ -14,8 +14,6 @@ RUN eval $(fnm env) && fnm use ${NODE_DEFAULT_VERSION} \
   # Pasamos la configuración inicial de angular a cada usuario, y a cada nuevo usuario para que todos tengan la misma configuración inicial
   # Usamos el script de la imagen de zsh
   && share_config_globally .angular-config.json --to /angular/.angular-config.json \
-  # Damos permiso de escritura a toda la carpeta de bun donde residen las instalaciones globales
-  && chmod -R 777 /usr/share/bun \
   # Añade texto necesario para el correcto funcionamiento en el .zshrc
   # Add text necessary for the correct operation in the .zshrc
   # The script that allows it is in the base zsh image (located in /usr/local/bin/add_text_to_zshrc)
